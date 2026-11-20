@@ -1,0 +1,13 @@
+VIAJE+ - Página adaptada
+
+1. Abre index.html en tu navegador.
+2. La hoja de estilos está en css/estilos.css.
+3. Coloca tus imágenes en la carpeta imagenes con estos nombres:
+   - portada.jpg
+   - conductor.jpg
+   - auto-economico.jpg
+   - auto-confort.jpg
+   - moto.jpg
+
+La página funciona como demostración. El formulario no envía ni almacena datos.
+Puedes cambiar los textos y las imágenes manteniendo los nombres de archivo.

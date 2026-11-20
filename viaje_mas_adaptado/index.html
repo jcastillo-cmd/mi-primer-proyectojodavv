@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1: adapta el ancho de la página a celulares y tabletas. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Viaje+</title>
+  <!-- PASO 2: conecta este HTML con la hoja de estilos compartida. -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="description" content="Viaje+, una demostración de servicios de transporte urbano.">
+</head>
+
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- PASO 3: la cabecera permanece visible al desplazarse gracias a position: sticky. -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio" aria-label="Viaje+, ir al inicio">Viaje<span>+</span></a>
+
+      <!-- PASO 4: el menú se organiza horizontalmente con Flexbox. -->
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Ventajas</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contáctenos</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- PASO 5: el contenido principal comienza en una sección independiente del header. -->
+    <section id="inicio" class="hero contenedor dos-columnas" aria-labelledby="titulo">
+      <div class="hero-texto">
+        <p class="etiqueta">Muévete por la ciudad de forma sencilla</p>
+        <h1 id="titulo">Tu próximo destino comienza con <span>Viaje+</span></h1>
+        <p>Encuentra opciones de transporte para tus actividades diarias. Elige cómo viajar y conoce una forma más fácil de desplazarte por la ciudad.</p>
+        <a class="boton" href="#solicitar">Solicitar un viaje</a>
+        <a class="enlace" href="#servicios">Conocer los servicios</a>
+        <p class="nota">Proyecto web demostrativo. Las solicitudes no se envían a una empresa de transporte.</p>
+      </div>
+      <figure class="postal">
+        <img class="foto" src="imagenes/imagen.png" alt="Persona disfrutando de un viaje junto a la costa" width="1000" height="667">
+        <figcaption></figcaption>
+      </figure>
+    </section>
+
+    <section id="nosotros" class="seccion fondo">
+      <div class="contenedor dos-columnas">
+        <img class="foto" src="imagenes/conductor.png" alt="Conductor sonriente dentro de un automóvil" width="1000" height="667" loading="lazy">
+        <div>
+          <p class="etiqueta">Conoce Viaje+</p>
+          <h2>Nuestra misión</h2>
+          <p>Facilitar los desplazamientos urbanos mediante opciones de transporte prácticas, accesibles y cómodas para cada necesidad.</p>
+          <h2>Nuestra visión</h2>
+          <p>Ser una propuesta de movilidad que ayude a las personas a organizar sus viajes diarios de manera sencilla y confiable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="seccion contenedor">
+      <p class="etiqueta">Encuentra tu forma de viajar</p>
+      <h2 class="centrado">Nuestros servicios</h2>
+      <p class="descripcion centrado">Elige la opción que mejor se adapte a tu recorrido.</p>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <img class="foto servicio-foto" src="imagenes/servicio economico.png" alt="Automóvil compacto para un viaje económico" width="800" height="550" loading="lazy">
+          <span class="numero">01 / Económico</span>
+          <h3>Viaje económico</h3>
+          <p>Una alternativa práctica para tus recorridos diarios por la ciudad.</p>
+          <a href="#solicitar">Elegir servicio</a>
+        </article>
+        <article class="tarjeta">
+          <img class="foto servicio-foto" src="imagenes/servicio confort.png" alt="Automóvil cómodo para un viaje confort" width="800" height="550" loading="lazy">
+          <span class="numero">02 / Confort</span>
+          <h3>Viaje confort</h3>
+          <p>Disfruta de una experiencia más cómoda durante tus desplazamientos.</p>
+          <a href="#solicitar">Elegir servicio</a>
+        </article>
+        <article class="tarjeta">
+          <img class="foto servicio-foto" src="imagenes/servicio en moto.png" alt="Motocicleta para desplazamientos urbanos" width="800" height="550" loading="lazy">
+          <span class="numero">03 / Moto</span>
+          <h3>Viaje en moto</h3>
+          <p>Una opción ágil para recorrer distancias cortas por la ciudad.</p>
+          <a href="#solicitar">Elegir servicio</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PASO 7: los botones de opción comparten el mismo name y muestran un panel según la selección. -->
+    <section id="orientador" class="seccion fondo">
+      <div class="contenedor">
+        <p class="etiqueta">Orientador de servicios · Demostración</p>
+        <h2>¿Cómo deseas viajar?</h2>
+        <p>Selecciona una opción para conocer sus características.</p>
+
+        <fieldset class="orientador">
+          <legend>Tipo de viaje</legend>
+          <input type="radio" name="tipo-viaje" id="economico" checked>
+          <label for="economico">Económico</label>
+
+          <input type="radio" name="tipo-viaje" id="confort">
+          <label for="confort">Confort</label>
+
+          <input type="radio" name="tipo-viaje" id="moto">
+          <label for="moto">Moto</label>
+
+          <div class="resultados">
+            <article class="respuesta respuesta-economico">
+              <h3>Viaje económico</h3>
+              <p>Ideal para tus recorridos cotidianos cuando buscas una alternativa práctica.</p>
+            </article>
+            <article class="respuesta respuesta-confort">
+              <h3>Viaje confort</h3>
+              <p>Una opción pensada para quienes priorizan comodidad durante el trayecto.</p>
+            </article>
+            <article class="respuesta respuesta-moto">
+              <h3>Viaje en moto</h3>
+              <p>Una alternativa ágil para determinados recorridos urbanos de corta distancia.</p>
+            </article>
+          </div>
+          <a class="boton" href="#solicitar">Solicitar esta opción</a>
+        </fieldset>
+        <p class="nota">La selección es demostrativa y no consulta disponibilidad real de vehículos.</p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="seccion contenedor">
+      <p class="etiqueta">Una experiencia sencilla</p>
+      <h2 class="centrado">¿Cómo funciona?</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="numero">01 / Indica</span>
+          <h3>Elige tu recorrido</h3>
+          <p>Escribe el punto de partida y el destino al que deseas llegar.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="numero">02 / Selecciona</span>
+          <h3>Escoge tu servicio</h3>
+          <p>Compara las opciones disponibles en esta demostración y selecciona la que prefieras.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="numero">03 / Confirma</span>
+          <h3>Revisa tu solicitud</h3>
+          <p>Comprueba los datos ingresados antes de enviar el formulario de prueba.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="seccion fondo">
+      <div class="contenedor">
+        <p class="etiqueta">Conoce nuestras opciones</p>
+        <h2>Galería de Viaje+</h2>
+        <div class="galeria">
+          <figure>
+            <img src="imagenes/serv_eco.png" alt="Automóvil para servicio económico" width="800" height="550" loading="lazy">
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/serv_conf.png" alt="Automóvil para servicio confort" width="800" height="550" loading="lazy">
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="imagenes/serv_moto.png" alt="Motocicleta para transporte urbano" width="800" height="550" loading="lazy">
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="seccion contenedor">
+      <p class="etiqueta">Experiencia de ejemplo</p>
+      <h2>Lo que buscamos ofrecer</h2>
+      <blockquote>“Poder elegir una opción de transporte de acuerdo con mi recorrido hace que organizar mis actividades sea más sencillo”.</blockquote>
+      <p class="nota">Testimonio ficticio creado únicamente para representar la experiencia de un usuario.</p>
+    </section>
+
+    <!-- PASO 8: formulario con campos obligatorios y validación del navegador. -->
+    <section id="contacto" class="seccion fondo">
+      <div class="contenedor dos-columnas">
+        <div>
+          <p class="etiqueta">Formulario de demostración</p>
+          <h2 id="solicitar">Solicita tu viaje</h2>
+          <p>Completa los campos para probar el recorrido de solicitud de Viaje+.</p>
+          <p class="nota">Esta práctica no guarda datos ni solicita un vehículo real. Utiliza información ficticia.</p>
+        </div>
+
+        <form class="formulario" id="travelForm">
+          <label for="nombre">Nombre de prueba</label>
+          <input id="nombre" type="text" required maxlength="60" placeholder="Ejemplo: Ana" autocomplete="off">
+
+          <label for="origen">Punto de partida</label>
+          <input id="origen" type="text" required maxlength="100" placeholder="Ej. San Isidro">
+
+          <label for="destino">Destino</label>
+          <input id="destino" type="text" required maxlength="100" placeholder="Ej. Miraflores">
+
+          <label for="servicio">Tipo de servicio</label>
+          <select id="servicio" required>
+            <option value="">Selecciona una opción</option>
+            <option>Viaje económico</option>
+            <option>Viaje confort</option>
+            <option>Viaje en moto</option>
+          </select>
+
+          <div class="aceptacion">
+            <input id="acepto" type="checkbox" required>
+            <label for="acepto">Entiendo que es una simulación.</label>
+          </div>
+
+          <button class="boton" type="submit">Enviar solicitud de prueba</button>
+          <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página compartido por las secciones del sitio. -->
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div>
+        <a class="marca marca-pie" href="#inicio">Viaje<span>+</span></a>
+        <p>Tu viaje, más fácil.</p>
+      </div>
+      <div>
+        <h3>Enlaces</h3>
+        <p><a href="#inicio">Inicio</a></p>
+        <p><a href="#servicios">Servicios</a></p>
+        <p><a href="#proyectos">Ventajas</a></p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p>Perú</p>
+        <p>Contacto de ejemplo: hola@viajemas.example</p>
+      </div>
+    </div>
+    <div class="contenedor copyright">
+      <p>© 2026 Viaje+ · Proyecto web demostrativo.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simula el envío y muestra un resumen sin transmitir ni guardar información.
+    const formulario = document.getElementById("travelForm");
+    const mensaje = document.getElementById("mensaje");
+
+    formulario.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const origen = document.getElementById("origen").value.trim();
+      const destino = document.getElementById("destino").value.trim();
+      const servicio = document.getElementById("servicio").value;
+
+      mensaje.textContent =
+        "¡Solicitud de demostración completada, " + nombre + "! " +
+        "Tu recorrido sería de " + origen + " a " + destino +
+        " mediante " + servicio + ". No se ha solicitado un vehículo real.";
+    });
+  </script>
+</body>
+</html>
